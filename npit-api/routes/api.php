@@ -17,6 +17,7 @@ Route::middleware("auth:api")->group(function () {
     Route::patch('/change-password/{id}', [AuthController::class, 'change_password']);
 
     //api/student/
+    Route::get('students', [StudentController::class,'getAll'])->name('student.getAll');
     Route::get('student/{id}', [StudentController::class,'getById'])->name('student.show');
     Route::post('student/create', [StudentController::class,'create'])->name('student.create');
 });

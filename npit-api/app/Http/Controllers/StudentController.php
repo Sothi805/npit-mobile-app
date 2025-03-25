@@ -56,4 +56,19 @@ class StudentController extends Controller
             "data" => $student
         ]);
     }
+    public function getAll(){
+        $student = Student::get();
+        if(!$student){
+            return response()->json([
+                "status"=> "error",
+                "message"=> "failed to fetch student",
+                "data"=> null
+            ]);
+        }
+        return response()->json([
+            "status"=> "success",
+            "message"=> "successfully fetched student",
+            "data" => $student
+        ]);
+    }
 }
