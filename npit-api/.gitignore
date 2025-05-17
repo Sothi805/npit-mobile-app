@@ -7,6 +7,12 @@ npm-debug.log
 .env
 .env.*
 
+# production
+/build
+/dist
+/dist/*
+
+
 # Build files
 build/
 dist/
